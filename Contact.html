@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Bread & Dhokla</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .restaurant-nav-bar {
+            background-color: #f8f8f8;
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px; 
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-grow: 1; 
+            justify-content: space-between;
+        }
+
+        .nav-menu-list {
+            display: flex;
+            align-items: center; 
+            flex-grow: 1; 
+            justify-content: space-around; 
+            margin: 0;
+            padding: 0; 
+        }
+
+        .main-nav-link {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            margin: 0 10px; 
+        }
+
+        .main-nav-link:hover {
+            color: rgb(131, 9, 9);
+        }
+
+        .nav-menu-button {
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .menu-icon {
+            width: 30px;
+            height: 20px;
+            position: relative;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info h2 {
+            margin-top: 0;
+        }
+
+        .contact-form {
+            background-color: rgb(222, 205, 192);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 95%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="restaurant-nav-bar">
+        <div class="navbar-container">
+            <nav role="navigation" class="nav-menu">
+                <div class="nav-menu-list">
+                    <a href="Menu.html" class="main-nav-link">menu</a>
+                    <a href="Contact.html" class="main-nav-link">contact</a>
+                </div>
+                <a href="MiniProject.html">
+                    <img src="Bread & Dhokla.png" height="100" width="100" alt="Bread & Dhokla Logo" >
+                </a>
+                <div class="nav-menu-list">
+                    <a href="Order.html" class="main-nav-link">order</a>
+                    <a href="About.html" class="main-nav-link">about</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="contact-info">
+            <h2>contact us</h2>
+            for any inquiries, please contact us via phone or email: <br>
+            <img src="Phone.png" height="10">  : +91 96241 20773 <br>
+            <img src="Email.png" height="10"> : thapliyal.nihar2022@vitstudent.ac.in
+        </div>
+        <div class="contact-form">
+            <h2>send us a message</h2>
+            <form id="contact-form" action="submit.php" method="POST">
+                <div class="form-group">
+                    <label for="name">your name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">your e-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">your message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="send message">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                form.reset();
+                alert('Message sent!');
+            });
+        });
+    </script>
+</body>
+</html>

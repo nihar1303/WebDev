@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bread & Dhokla</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .restaurant-nav-bar {
+            background-color: #f8f8f8;
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px; 
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-grow: 1; 
+            justify-content: space-between;
+        }
+
+        .nav-menu-list {
+            display: flex;
+            align-items: center; 
+            flex-grow: 1; 
+            justify-content: space-around; 
+            margin: 0;
+            padding: 0; 
+        }
+
+        .main-nav-link {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            margin: 0 10px; 
+        }
+
+        .main-nav-link:hover {
+            color: rgb(131, 9, 9);
+        }
+
+        .nav-menu-button {
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .menu-icon {
+            width: 30px;
+            height: 20px;
+            position: relative;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 75vh;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; 
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 1s;
+            animation: slide 12s infinite;
+        }
+
+        #s1 {
+            background-image: url(1.jpeg); 
+            animation-delay: 0s;
+        }
+
+        #s2 {
+            background-image: url(2.jpeg);
+            animation-delay: 3s; 
+        }
+
+        #s3 {
+            background-image: url(3.jpeg);
+            animation-delay: 6s; 
+        }
+
+        #s4 {
+            background-image: url(4.jpg);
+            animation-delay: 9s;
+        }
+        @keyframes slide {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .info-block {
+            text-align: center;
+            flex-basis: calc(33.33% - 20px);
+            padding: 20px;
+        }
+
+        .info-block h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .info-block p {
+            margin: 0;
+            color: #666;
+        }
+
+        .info-block button {
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .info-block button:hover {
+            background-color: #0056b3;
+        }
+        
+        .reserve button{
+            background-color: grey; 
+            color: white;  
+            border: none; 
+            padding:  8px 15px; 
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .reserve button:hover{
+            background-color: rgb(76, 75, 75);
+        }
+    </style>
+</head>
+<body>
+    <div class="restaurant-nav-bar">
+        <div class="navbar-container">
+            <nav role="navigation" class="nav-menu">
+                <div class="nav-menu-list">
+                    <a href="Menu.html" class="main-nav-link">menu</a>
+                    <a href="Contact.html" class="main-nav-link">contact</a>
+                </div>
+                <a href="MiniProject.html">
+                    <img src="Bread & Dhokla.png" height="100" width="100" alt="Bread & Dhokla Logo">
+                </a>
+                <div class="nav-menu-list">
+                    <a href="Order.html" class="main-nav-link">order</a>
+                    <a href="About.html" class="main-nav-link">about</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="slide" id="s1"></div>
+        <div class="slide" id="s2"></div>
+        <div class="slide" id="s3"></div>
+        <div class="slide" id="s4"></div>
+    </div>
+
+    <div class="container">
+        <div class="info-block">
+            <h3>address</h3>
+            <p>22913-26 VIT<br>Vellore, TN</p>
+            <br>
+            <button type="button">get directions</button>
+        </div>
+        <div class="info-block"> 
+            <h3>hours</h3>
+            <p><strong>weekdays:</strong><br>5pm - 11:30pm</p>
+            <p><strong>weekends:</strong><br>10am - 2pm<br>5pm - 9:30pm</p>
+        </div>
+    </div>
+    
+    <div class="reserve" style="background-image: url('Reserve.jpg'); background-size: cover; display: flex; justify-content: center; align-items: center; height: 50vh;">
+        <div style="text-align: center; color: white;">
+            <h3>make a reservation</h3>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <input type="date" id="reservation-date" style="margin-bottom: 5px;">
+                <input type="time" id="reservation-time" style="margin-bottom: 5px;">
+                <select id="party-size" style="margin-bottom: 5px;">
+                    <option>1 person</option>
+                    <option>2 people</option>
+                    <option>3 people</option>
+                    <option>4 people</option>
+                    <option>5 people</option>
+                    <option>6 people</option>
+                    <option>7 people</option>
+                    <option>8 people</option>
+                </select>
+                <button onclick="book()">book a table</button>
+            </div>
+        </div>
+    </div>
+    
+    <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+        <div style="text-align: center; color: rgb(46, 46, 46);">
+            <h2>good food, good mood</h2>
+        </div>
+    </div>
+
+    <div style="text-align: center; background-color: rgb(222, 205, 192); padding: 20px;">
+        <p style="font-size: 14px;">&copy; <u>22BCE0913 Thapliyal Nihar D.</u> All Rights Reserved</p>
+    </div>
+
+    <script>
+        function book() {
+            const reservationDate = document.getElementById('reservation-date').value;
+            const reservationTime = document.getElementById('reservation-time').value;
+            const partySize = document.getElementById('party-size').value;
+            const formattedDateTime = new Date(reservationDate + 'T' + reservationTime).toLocaleString();
+            alert('Thank you! Your booking is made for ' + formattedDateTime + ' for ' + partySize + '. We look forward to seeing you!');
+
+            document.getElementById('reservation-date').value = '';
+            document.getElementById('reservation-time').value = '';
+            document.getElementById('party-size').selectedIndex = 0;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Bread & Dhokla</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .restaurant-nav-bar {
+            background-color: #f8f8f8;
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px; 
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-grow: 1; 
+            justify-content: space-between;
+        }
+
+        .nav-menu-list {
+            display: flex;
+            align-items: center; 
+            flex-grow: 1; 
+            justify-content: space-around; 
+            margin: 0;
+            padding: 0; 
+        }
+
+        .main-nav-link {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            margin: 0 10px; 
+        }
+
+        .main-nav-link:hover {
+            color: rgb(131, 9, 9);
+        }
+
+        .nav-menu-button {
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .menu-icon {
+            width: 30px;
+            height: 20px;
+            position: relative;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: rgb(222, 205, 192);
+            padding: 20px;
+            margin-top: 0;
+        }
+
+        .menu-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        .menu-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .dish-name {
+            font-weight: bold;
+        }
+
+        .dish-price {
+            float: right;
+            font-weight: bold;
+        }
+
+        .dish-description {
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="restaurant-nav-bar">
+        <div class="navbar-container">
+            <nav role="navigation" class="nav-menu">
+                <div class="nav-menu-list">
+                    <a href="Menu.html" class="main-nav-link">menu</a>
+                    <a href="Contact.html" class="main-nav-link">contact</a>
+                </div>
+                <a href="MiniProject.html">
+                    <img src="Bread & Dhokla.png" height="100" width="100" alt="Bread & Dhokla Logo" >
+                </a>
+                <div class="nav-menu-list">
+                    <a href="Order.html" class="main-nav-link">order</a>
+                    <a href="About.html" class="main-nav-link">about</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <h2><i>explore our menu</i></h2>
+
+    <div class="menu-container">
+        <div class="section-title"><b>appetizers</b></div>
+        <div class="menu-item">
+            <div class="dish-name">Crispy Spring Rolls</div>
+            <div class="dish-price">₹450</div>
+            <div class="dish-description">Crispy vegetable spring rolls served with sweet chili dipping sauce.</div>
+        </div>
+        <div class="menu-item">
+            <div class="dish-name">Mozzarella Sticks</div>
+            <div class="dish-price">₹350</div>
+            <div class="dish-description">Golden fried mozzarella sticks served with marinara sauce.</div>
+        </div>
+        <div class="menu-item">
+            <div class="dish-name">Garlic Butter Shrimp</div>
+            <div class="dish-price">₹750</div>
+            <div class="dish-description">Juicy shrimp sautéed in garlic butter and served with toasted bread.</div>
+        </div>
+        <br>
+        <div class="section-title"><b>main courses</b></div>
+        <div class="menu-item">
+            <div class="dish-name">Chicken Tikka Masala</div>
+            <div class="dish-price">₹550</div>
+            <div class="dish-description">Tender pieces of chicken marinated in yogurt and spices, cooked in a creamy tomato sauce.</div>
+        </div>
+        <div class="menu-item">
+            <div class="dish-name">Vegetable Pad Thai</div>
+            <div class="dish-price">₹850</div>
+            <div class="dish-description">Stir-fried rice noodles with mixed vegetables, tofu, and peanuts in a tangy tamarind sauce.</div>
+        </div>
+        <div class="menu-item">
+            <div class="dish-name">Chicken Burger</div>
+            <div class="dish-price">₹650</div>
+            <div class="dish-description">Juicy chicken patty topped with lettuce, tomato, onion, and melted cheddar cheese, served with fries.</div>
+        </div>
+        <br>
+        <div class="section-title"><b>desserts</b></div>
+        <div class="menu-item">
+            <div class="dish-name">Chocolate Lava Cake</div>
+            <div class="dish-price">₹200</div>
+            <div class="dish-description">Warm chocolate cake with a molten chocolate center, served with vanilla ice cream.</div>
+        </div>
+        <div class="menu-item">
+            <div class="dish-name">New York Cheesecake</div>
+            <div class="dish-price">₹275</div>
+            <div class="dish-description">Classic New York-style cheesecake topped with fresh strawberries.</div>
+        </div>
+        <div class="menu-item">
+            <div class="dish-name">Tiramisu</div>
+            <div class="dish-price">₹275</div>
+            <div class="dish-description">Traditional Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese.</div>
+        </div>
+    </div>
+</body>
+</html>
